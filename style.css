@@ -148,9 +148,10 @@ a:hover {
 
 /* SECTIONS */
 
+/* 96vh might be the problem that skills too much over flow */
 section {
   padding-top: 4vh;
-  height: 96vh;
+  height: 96vh; 
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -257,14 +258,20 @@ section {
   border: rgb(255, 255, 255) 0.1rem solid;
 }
 
-.btn-container {
+/* .btn-container {
   gap: 1rem;
-}
+} */
 
 /* ABOUT SECTION */
 
 #about {
   position: relative;
+}
+
+.about-details-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .about-containers {
@@ -273,19 +280,14 @@ section {
   margin-top: 2rem;
 }
 
-.about-details-container {
-  justify-content: center;
-  flex-direction: column;
-}
-
 .about-containers,
 .about-details-container {
   display: flex;
 }
 
-.about-pic {
+/* .about-pic {
   border-radius: 2rem;
-}
+} */
 
 .arrow {
   position: absolute;
@@ -298,8 +300,7 @@ section {
   flex: 1;
   background: white;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
-  border-color: rgb(163, 163, 163);
+  border: 0.1rem solid rgb(163, 163, 163);
   text-align: center;
 }
 
@@ -335,10 +336,10 @@ section {
 
 .article-container {
   display: flex;
-  text-align: initial;
+  text-align: left;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 1.5rem;
   justify-content: space-around;
   padding: 2rem;
 }
@@ -346,8 +347,8 @@ section {
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
-  gap: 0.6rem;
+  justify-content: flex-start;
+  gap: 0.5rem;
 }
 
 article .icon {
